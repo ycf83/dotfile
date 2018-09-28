@@ -12,3 +12,9 @@ gotop : https://github.com/cjbassi/gotop
 if u need somthing else; use issue , i try to help :)
 
 for color sheme i use pywal :  https://github.com/dylanaraps/pywal
+
+
+for zsh i use theme : https://github.com/bhilburn/powerlevel9k
+
+
+i need help , i search good theme for conky if u have one tell me :)

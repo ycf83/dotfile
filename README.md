@@ -9,3 +9,4 @@ gotop : https://github.com/cjbassi/gotop
 
 if u need somthing else; use issue , i try to help :)
 
+for color sheme i use pywal :  https://github.com/dylanaraps/pywal

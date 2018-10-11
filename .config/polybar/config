@@ -549,7 +549,7 @@ format = "<label>"
 format-prefix = " "
 format-prefix-foreground = #8C736C
 format-padding = 1
-exec =echo "$(torify wget -qO- https://canihazip.com/s | sed -e 's/[^[:digit:]\|.]//g')"
+exec =echo "$(wget -qO- https://canihazip.com/s | sed -e 's/[^[:digit:]\|.]//g')"
 exec-if = ping -c 1 debian.org
 format-underline = ${colors.secondary}
 ;format-background = #3C424D
@@ -566,8 +566,6 @@ format-connected-underline = #AF5247
 type = custom/script
 interval = 256
 format = "<label> "
-"format-prefix = "  "
-#format-prefix = " ƸӜƷ "
 format-prefix = "   "
 format-prefix-foreground = #f00060
 format-padding = 0
@@ -577,7 +575,6 @@ exec =echo "$(uname -n)"
 type = custom/script
 exec = uptime|awk '{print $2 " " $3 " " $4 " " $5 " " $6}'|cut -d ',' -f -2
 interval = 6
-format-prefix = "  "
 ;format-prefix-foreground = ${colors.error}
 format-foreground = ${colors.foreground}
 format-padding = 1
@@ -585,7 +582,7 @@ format-underline = #343435
 
 [module/update]
 type = custom/script
-exec =sudo ~/apt.sh
+exec =~/.config/polybar/modules/apt.sh
 interval = 7200
 #format-underline = ${colors.active}
 label="%output:0:45%"
@@ -601,7 +598,7 @@ format-underline = #dad3d1
 
 [module/tor]
 type = custom/script
-exec = ~/.config/polybar/status tor
+exec = ~/.config/polybar/modules/status tor
 interval = 6
 format-underline = ${colors.active}
 

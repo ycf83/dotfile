@@ -1,0 +1,6 @@
+#!/bin/sh
+
+TORS=$(systemctl status tor | awk '(NR == 3) {print $2}')
+
+echo "%{F#d1d1d1} Tor:%{F#aec795}$TORS  "
+
